@@ -11,6 +11,7 @@ import bs4
 import requests
 from datetime import datetime
 
+
 def retrieve(
     user,
     min_id   = None, 
@@ -25,6 +26,12 @@ def retrieve(
     (Default 20). Set n_tweets to None for no limit.
     max_reqs is used to specify a maximum number of requests
     to the api
+    
+    Parameters:
+        min_id   : Lowest tweet ID, non inclusive, to collect
+        max_id   : Highest tweet ID, non inclusive, to collect
+        n_tweets : Max number of tweets to retrieve
+        max_reqs : Max number of requests to twitter to make
     """
 
     url = ''.join((
